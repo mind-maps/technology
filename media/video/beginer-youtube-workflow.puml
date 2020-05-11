@@ -20,9 +20,13 @@ partition PostProduction {
     --> "End screen\n20 seconds"
     --> "Render" as R
     R --> "Upload" as U
+    
     B -right-> "Thumbnail"
-    note right: Better create separately \nthan automatic suggestion from youtube
+    note right: Better create separately \nthan automatic from youtube
     --> U
+    --> "Sub title"
+    note right:Do not render into video, use SRT
+    --> "End Screen"
 }
 partition "Post publish"{
     --> "Share in social media"
