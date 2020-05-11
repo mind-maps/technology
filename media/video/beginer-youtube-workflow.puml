@@ -1,0 +1,9 @@
+@startuml
+(*) -->"Start"
+if "Is it planned" then
+-->[true] "Story"
+--> "Shoot"
+else
+-->[false] "Shoot"
+
+@enduml
