@@ -1,9 +1,31 @@
 @startuml
 (*) -->"Start"
-if "Is it planned" then
--->[true] "Story"
+if "Is it planned?" then
+partition "Preproduction" {
+    --left> [true] "Story / scripts"
+    --left> "Actors"
+    --left> "Intro"
+    --left> "Scenes"
+    -left-> "Location"
+}
 --> "Shoot"
 else
 -->[false] "Shoot"
-
+endif
+partition PostProduction {
+    --> "Backup all videos" as B
+    --> "[[https://en.wikipedia.org/wiki/Rough_cut Rough cut]]" as RC
+    --> "Sync sound\nif recorded separately"
+    --> "Find and add music"
+    --> "End screen\n20 seconds"
+    --> "Render" as R
+    R --> "Upload" as U
+    B -right-> "Thumbnail"
+    note right: Better create separately \nthan automatic suggestion from youtube
+    --> U
+}
+partition "Post publish"{
+    --> "Share in social media"
+}
+-->(*)
 @enduml
