@@ -1,4 +1,8 @@
 @startuml
+Title YouTube publishing workflow
+center header
+Beginner workflow for YouTube videos
+endheader
 (*) -->"Start"
 if "Is it planned?" then
 partition "Preproduction" {
@@ -16,20 +20,32 @@ partition PostProduction {
     --> "Backup all videos" as B
     --> "[[https://en.wikipedia.org/wiki/Rough_cut Rough cut]]" as RC
     --> "Sync sound\nif recorded separately"
-    --> "Find and add music"
-    --> "End screen\n20 seconds"
+    --right> "Find and add music"
+    --> "Visual for end screen\n20 seconds"
+    note right:This is specific for YouTube
     --> "Render" as R
-    R --> "Upload" as U
-    
     B -right-> "Thumbnail"
     note right: Better create separately \nthan automatic from youtube
-    --> U
-    --> "Sub title"
-    note right:Do not render into video, use SRT
-    --> "End Screen"
+}
+partition YouTubeUpload {
+
+    R --> "Upload" as U
+    U --> "Sub title" as ST
+    note left:Do not render into video\n use SRT
+    ST--right> "Set Thumbnail" as STN
+    STN --right> "Video chapters" as VC
+    VC --right> "Add end screen" as ES
+    ES --right> "Mask faces \nif applicable " as MF
 }
 partition "Post publish"{
-    --> "Share in social media"
+    --> "Share in social media" as SM
+
 }
 -->(*)
+center footer JoymonOnline
+
+legend right
+  - 2 lines starting from a node means it can be done in parallel.
+endlegend
+
 @enduml
