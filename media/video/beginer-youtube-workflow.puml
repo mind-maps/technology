@@ -6,21 +6,23 @@ endheader
 (*) -->"Start"
 if "Is it planned?" then
 partition "Preproduction" {
-    --left> [true] "Story / scripts"
+    --left> [Yes] "Story / scripts"
     --left> "Actors"
     --left> "Intro"
     --left> "Scenes"
     -left-> "Location"
 }
---> "Shoot"
+--> "Production" as P
+note left:Refer the [[https://www.plantuml.com/plantuml/proxy?fmt=svg&cache=no&src=https://raw.githubusercontent.com/mind-maps/technology/master/media/video/publishing.puml Mind map]] \nfor shooting quick references
 else
--->[false] "Shoot"
+-->[No] P
 endif
 partition PostProduction {
     --> "Backup all videos" as B
+    note left:One copy in working machine \n another in hard external disk
     --> "[[https://en.wikipedia.org/wiki/Rough_cut Rough cut]]" as RC
     --> "Sync sound\nif recorded separately"
-    --right> "Find and add music"
+    --left> "Find and add music"
     --> "Visual for end screen\n20 seconds"
     note right:This is specific for YouTube
     --> "Render" as R
