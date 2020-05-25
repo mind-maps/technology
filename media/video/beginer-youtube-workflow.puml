@@ -37,7 +37,10 @@ partition YouTubeUpload {
     ST--right> "Set Thumbnail" as STN
     STN --right> "Video chapters" as VC
     VC --right> "Add end screen" as ES
-    ES --right> "Mask faces \nif applicable " as MF
+    ES --> "Recording date"
+    --left> "Video location"
+    --left> "Video language"
+    --left> "Mask faces \nif applicable " as MF
 }
 partition "Post publish"{
     --> "Share in social media" as SM
