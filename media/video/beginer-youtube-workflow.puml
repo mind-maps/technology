@@ -40,6 +40,7 @@ partition YouTubeUpload {
     ES --> "Recording date"
     --left> "Video location"
     --left> "Video language"
+    --left> "Tags"
     --left> "Mask faces \nif applicable " as MF
 }
 partition "Post publish"{
