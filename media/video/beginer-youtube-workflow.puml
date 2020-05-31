@@ -25,6 +25,7 @@ partition PostProduction {
     --> "End screen visual (20 seconds)"
     note right:YouTube Only
     --left> "Render" as R
+    note left: If output doesn't looks good,\n goto Rough cut step 
     B -right-> "Create Thumbnail"
     note right: Better create separately \nthan auto from youtube
 }
