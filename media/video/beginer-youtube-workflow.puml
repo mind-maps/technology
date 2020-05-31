@@ -3,8 +3,7 @@ Title YouTube publishing workflow
 center header
 Beginner workflow for YouTube videos
 endheader
-(*) -->"Start"
-if "Is it planned?" then
+(*) if "Is it planned?" then
 partition "Preproduction" {
     --left> [Yes] "Story / scripts"
     --left> "Actors"
@@ -19,29 +18,31 @@ else
 endif
 partition PostProduction {
     --> "Backup all videos" as B
-    note left:One copy in working machine \n another in hard external disk
+    note left:One in working machine \nanother in external disk\nPrefer NAS
     --> "[[https://en.wikipedia.org/wiki/Rough_cut Rough cut]]" as RC
     --> "Sync sound\nif recorded separately"
-    --left> "Find and add music"
-    --> "Visual for end screen\n20 seconds"
-    note right:This is specific for YouTube
-    --> "Render" as R
-    B -right-> "Thumbnail"
-    note right: Better create separately \nthan automatic from youtube
+    --right> "Add music,\nspecial effects"
+    --> "End screen visual (20 seconds)"
+    note right:YouTube Only
+    --left> "Render" as R
+    B -right-> "Create Thumbnail"
+    note right: Better create separately \nthan auto from youtube
 }
 partition YouTubeUpload {
 
-    R --> "Upload" as U
-    U --> "Sub title" as ST
-    note left:Do not render into video\n use SRT
-    ST--right> "Set Thumbnail" as STN
-    STN --right> "Video chapters" as VC
-    VC --right> "Add end screen" as ES
-    ES --> "Recording date"
+    R --> "Description" as U
+    U --right> "Video chapters" as VC
+    VC--right> "Thumbnail" as STN
+    STN--right> "Audience" as AUD
+    AUD --right> "Tags" as TAGS
+    TAGS --right> "End screen" as ES
+    ES --> "Recording date" as RD
     --left> "Video location"
+    --left> "Category"
     --left> "Video language"
-    --left> "Tags"
     --left> "Mask faces \nif applicable " as MF
+    --left> "Sub title" as ST
+    note left:Do not render into video\n use SRT
 }
 partition "Post publish"{
     --> "Share in social media" as SM
