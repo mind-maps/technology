@@ -29,12 +29,13 @@ endheader
 ****** Youtube channels
 ******* [[https://www.youtube.com/channel/UC8ScFr0TdBPz9bLElei6-VA/videos Video Libary]]
 **** Slow motion .25x FPS, Fast 2x FPS
-*** Duration 10-15 mins Home,10 Mins professional tutorial
+
 *** 20 secs end screen
+*** Rendering
+**** Format-MP4+AAC-LC+H.264+30FPS+1080P+8Mbps
+**** Sub titles (SRT)
 *** Thumbnail
 **** Spark.Adobe - Bright, readable
-*** Format-MP4+AAC-LC+H.264+30FPS+1080P+8Mbps
-*** Sub titles
 *** YouTube
 **** Mask faces
 **** Video chapters
@@ -59,6 +60,9 @@ left side
 *** Format
 **** 60FPS
 **** 1080P
+*** Duration
+**** 10-15 mins Home
+**** 10 Mins professional tutorial
 ** Pre production
 *** Intro 15 secs
 *** Story
