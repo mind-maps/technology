@@ -9,8 +9,10 @@ endheader
 
 ** Post Production
 *** Tools
-**** ActivePresenter(screeen recording)
-**** Shotcut(life videos)
+**** Life Videos
+***** Editor - [[https://shotcut.org/download/ Shotcut]]
+**** Cut and merge - [[https://github.com/mifi/lossless-cut/releases LosslessCut]]
+
 *** Dare to remove scenes
 *** Special effects
 **** Audio
@@ -56,14 +58,21 @@ endheader
 
 left side
 ** Production
-*** Lighting
-*** Mic volumne
-*** Format
-**** 60FPS
-**** 1080P
-*** Duration
-**** 10-15 mins Home
-**** 10 Mins professional tutorial
+*** Life videos
+**** Lighting
+**** Mic volumne
+**** Format
+***** 60FPS
+***** 1080P
+**** Duration
+***** 10-15 mins Home
+*** Screen cast
+**** 10 Mins
+**** Software
+***** Screen record [[https://atomisystems.com/download/ ActivePresenter]]
+***** Streaming - [[https://obsproject.com/download OBS Studio]]
+***** [[https://www.e2esoft.com/ivcam/ iVCam Mobile as cam]]
+***** [[https://www.apowersoft.com/phone-mirror Mirror mobile]]
 ** Pre production
 *** Intro 15 secs
 *** Story
